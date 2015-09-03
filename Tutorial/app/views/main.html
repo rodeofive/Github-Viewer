@@ -1,0 +1,9 @@
+﻿<div>
+    <div data-ng-show="countDown">Time left: {{ countDown }}</div>
+
+    <form name="searchUser" data-ng-submit="searchForUser(userName)">
+        User Name:
+        <input type="search" required placeholder="Github user name" data-ng-model="userName"/>
+        <input type="submit" class="btn btn-primary" value="Search"/>
+    </form>
+</div>

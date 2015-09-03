@@ -1,0 +1,27 @@
+﻿<div>
+    <h4>{{ githubUser.name }} Repositories</h4>
+    {{ error }}
+
+    <div data-ng-show="githubUser">
+        <!--<img data-ng-src="{{ githubUser.avatar_url }}" />-->
+    </div>
+</div>
+
+<table class="table table-striped table-bordered sortable">
+    <thead>
+        <tr>
+            <th data-ng-click="repoSortBy = 'name'; sortReverse = !sortReverse">Name</th>
+            <th data-ng-click="repoSortBy = 'stargazers_count'; sortReverse = !sortReverse">Stars</th>
+            <th data-ng-click="repoSortBy = 'language'; sortReverse = !sortReverse">Language</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-ng-repeat="repo in repos | orderBy: repoSortBy : sortReverse">
+            <td><a href="#/repo/{{ githubUser.name }}/{{ repo.name }}"/>{{ repo.name }}</td>
+            <td>{{ repo.stargazers_count | number }}</td>
+            <td>{{ repo.language }}</td>
+        </tr>
+    </tbody>
+</table>
+<br/>
+<a href="#/main">Back to search</a>

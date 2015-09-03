@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/demo7.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Github Viewer</h1>
+        <div data-ng-view=""></div>
+    </div>
+
+
+<script src="Scripts/angular.js"></script>
+<script src="Scripts/angular-resource.min.js"></script>
+<script src="Scripts/angular-route.min.js"></script>
+<script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
+
+<script src="app/app.js"></script>
+<script src="app/controllers/searchController.js"></script>
+<script src="app/controllers/userController.js"></script>
+<script src="app/controllers/repoController.js"></script>
+<script src="app/services/githubService.js"></script>
+</body>
+</html>

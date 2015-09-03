@@ -1,0 +1,15 @@
+﻿<div>
+    <div data-ng-controller="searchController">
+        <div id="UserDetails">
+            <div>Name: {{ githubUser.name }}</div>
+            <div>Location: {{ githubUser.location }}</div>
+            <div>Company: {{ githubUser.company }}</div>
+
+            <!--<div data-ng-show="githubUser">
+                <img data-ng-src="{{ githubUser.avatar_url }}"/>
+            </div>-->
+
+            <div data-ng-include="'app/views/repositories.html'" data-ng-show="githubUser"></div>
+        </div>
+    </div>
+</div>

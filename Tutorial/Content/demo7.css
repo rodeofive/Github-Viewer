@@ -1,0 +1,6 @@
+﻿ /* Needed to use bootstrap with angular. Removes empty href attributes from directive templates*/ 
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.sortable th {
+    cursor: pointer;
+}

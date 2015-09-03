@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/demo7.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Github Viewer</h1>
+        <div data-ng-view=""></div>
+    </div>
+
+
+<script src="Scripts/angular.js"></script>
+<script src="Scripts/angular-resource.min.js"></script>
+<script src="Scripts/angular-route.min.js"></script>
+<script src="Scripts/angular-animate.min.js"></script>
+<script src="Scripts/angular-sanitize.min.js"></script>
+<script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
+<script src="Scripts/toastr.js"></script>
+<script src="Scripts/ngplus-overlay.js"></script>
+
+<!-- inject:js -->
+<!-- Bootstrapping -->
+<script src="app/app.module.js"></script>
+
+<!-- Reusable Blocks/Modules -->
+<script src="app/github.module.js"></script>
+<script src="app/blocks/exception/exception.module.js"></script>
+<script src="app/blocks/logger/logger.module.js"></script>
+<script src="app/blocks/router/router.module.js"></script>
+<script src="app/core/core.module.js"></script>
+
+<script src="app/blocks/logger/logger.js"></script>
+<script src="app/blocks/router/route-helper.provider.js"></script>
+    
+
+<!-- github module -->
+
+<script src="app/config.route.js"></script>
+<script src="app/controllers/searchController.js"></script>
+<script src="app/controllers/userController.js"></script>
+<script src="app/controllers/repoController.js"></script>
+<script src="app/services/githubService.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿The primary responsibility of a controller is to set up the model on the $scope object
+
+Angular passes $scope to the controller function, and the controller manipulates that $scope:
+   var MainController = function ($scope) {
+        $scope.message = "Hello Angular!";
+   };
+The controller never has to manipulate the html (the view)
+
+Binding expressions are used to move data into the view:
+	<h1>{{ message }}</h1>
+
+Data attached to $scope is called the "model"
+
+Controllers set up the model
+Views consume the model using directives
+Directives serve as an intermediary between the model and the view
+Keeps SOC between model logic and presentation logic
+
+Services allow SOC; Typically include logic that doesn't fit in a model, view or directive.
+
+Controllers and directives both use services 
+
+The role of services:
+  - services keep complexity out of controllers
+  
+Check out ngSmoothScroll for smooth scrolling: https://github.com/d-oliveros/ngSmoothScroll
+
+Why build your own services:
+  - Create reusable logic
+  - Create shared data
+  - Manage complexity
+
+
+Routing
+Each view and controller is responsible for unique pieces of functionality
+

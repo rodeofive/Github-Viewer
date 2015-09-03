@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="githubViewer">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+<div>
+    <div data-ng-controller="searchController">
+        <h1>Demo 5 - Services</h1>
+        <h3>Github Searcher</h3>
+
+        <div data-ng-show="countDown">Time left: {{ countDown }}</div>
+
+        <form name="searchUser" data-ng-submit="searchForUser(userName)">
+            User Name:
+            <input type="search" required placeholder="Github user name" data-ng-model="userName" />
+            <input type="submit" class="btn btn-primary" value="Search"/>
+        </form>
+
+        <div id="UserDetails">
+            <div>Name: {{ githubUser.name }}</div>
+            <div>Location: {{ githubUser.location }}</div>
+            <div>Company: {{ githubUser.company }}</div>
+
+            <div data-ng-show="githubUser">
+                <img data-ng-src="{{ githubUser.avatar_url }}"/>
+            </div>
+
+            <div data-ng-include="'app/partials/githubUserDetails.html'" data-ng-show="githubUser"></div>
+
+        </div>
+    </div>
+</div>
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="js/demo5.js"></script>
+</body>
+</html>

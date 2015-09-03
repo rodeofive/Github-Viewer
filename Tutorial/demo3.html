@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html ng-app="githubViewer">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+<div ng-controller="MainController">
+    <h1>Demo 3 - Modules</h1>
+    <h3>{{ message }}</h3>
+
+    <div ng-controller="MainController">
+        <div>First Name: {{ person.firstName }}</div>
+        <div>Last Name: {{ person.lastName }}</div>
+        <div>Age: {{ person.age }}</div>
+    </div>
+
+    <div ng-controller="PersonController">
+        <div>{{ error }}</div>
+        <div>Name: {{ githubUser.name }}</div>
+        <div>Location: {{ githubUser.location }}</div>
+        <div>Company: {{ githubUser.company }}</div>
+    </div>
+
+</div>
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="js/demo3.js"></script>
+</body>
+</html>
